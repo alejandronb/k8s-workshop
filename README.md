@@ -4,6 +4,11 @@ Repositorio con ejemplos sencillos para trabajar con Kubernetes
 
 Para ejecutar las plantillas del repo:
 
+### NAMESPACES
+```
+kubectl create ns <namespace>
+```
+
 ### POD
 ```
 kubectl apply -f pod.yaml -n <namespace>
