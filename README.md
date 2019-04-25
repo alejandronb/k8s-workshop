@@ -44,7 +44,19 @@ kubectl apply -f service.yaml -n <namespace>
 kubectl apply -f service-node-port.yaml -n <namespace>
 ```
 
+### PORT-FORWARDING
+```
+kubectl port-forward pods/myapp-pod 8080:80
+kubectl port-forward service/myservice 8080:80
+```
 
+### Rolling update
+```
+Apply changes to our file
+kubectl apply -f deployment.yaml -n <namespace>
+kubectl rollout status deployments/nginx-deployment
+kubectl rollout undo deployments/nginx-deployment
+```
 ### Comandos útiles
 ```
 kubectl describe pod|deployment|svc -n <namespace>

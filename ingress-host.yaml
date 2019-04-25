@@ -1,0 +1,12 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: test-ingress
+spec:
+  rules:
+  - host: nginx.at-techday.com
+    http:
+      paths:
+      - backend:
+          serviceName: my-service
+          servicePort: 80
